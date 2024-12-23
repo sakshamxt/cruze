@@ -23,3 +23,24 @@ Registers a new user.
   "password": "secret123"
 }
 ```
+
+# /user/login
+
+Logs in a user.
+
+## Required Data
+• email (string, valid email)  
+• password (string, min length 6)
+
+## Status Codes
+• 200 OK: Returns auth token and user data.  
+• 400 Bad Request: Returns validation errors.  
+• 401 Unauthorized: Invalid credentials
+
+## Example
+```
+{
+  "email": "john.doe@example.com",
+  "password": "secret123"
+}
+```
