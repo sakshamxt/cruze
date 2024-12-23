@@ -66,3 +66,39 @@ Logs out the current user and blacklist the token provided in cookie or headers
 
 ## Example
 No request body required.
+
+# /captain/register
+
+Registers a new captain.
+
+## Required Data
+• fullName.firstName (string, min length 3)  
+• fullName.lastName (string, min length 3)  
+• email (string, valid email)  
+• password (string, min length 6)  
+• vehicle.color (string, min length 3)  
+• vehicle.plate (string, min length 3)  
+• vehicle.capacity (number, min 1)  
+• vehicle.vehicleType (car, motorcycle, or auto)
+
+## Status Codes
+• 201 Created: Returns auth token and captain data  
+• 400 Bad Request: Validation errors or captain already exists
+
+## Example
+```
+{
+  "fullName": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "email": "john.doe@example.com",
+  "password": "secret123",
+  "vehicle": {
+    "color": "red",
+    "plate": "ABC123",
+    "capacity": 4,
+    "vehicleType": "car"
+  }
+}
+```
