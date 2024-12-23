@@ -102,3 +102,47 @@ Registers a new captain.
   }
 }
 ```
+
+# /captain/login
+
+Logs in a captain.
+
+## Required Data
+• email (string, valid email)  
+• password (string, min length 6)
+
+## Status Codes
+• 200 OK: Returns auth token and captain data  
+• 400 Bad Request: Validation errors  
+• 401 Unauthorized: Invalid credentials  
+• 404 Not Found: Captain not found
+
+## Example
+```
+{
+  "email": "john.doe@example.com",
+  "password": "secret123"
+}
+```
+
+# /captain/profile
+
+Returns the currently authenticated captain's profile.
+
+## Status Codes
+• 200 OK: Returns captain data  
+• 401 Unauthorized: Invalid or missing token
+
+## Example
+No request body required.
+
+# /captain/logout
+
+Logs out the current captain and blacklists the provided token.
+
+## Status Codes
+• 200 OK: Successfully logged out  
+• 401 Unauthorized: Invalid or missing token
+
+## Example
+No request body required.
