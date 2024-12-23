@@ -44,3 +44,25 @@ Logs in a user.
   "password": "secret123"
 }
 ```
+
+# /user/profile
+
+Returns the currently authenticated user's profile.
+
+## Status Codes
+• 200 OK: Returns user data  
+• 401 Unauthorized: Invalid or missing token
+
+## Example
+No request body required.
+
+# /user/logout
+
+Logs out the current user.
+
+## Status Codes
+• 200 OK: Successfully logged out  
+• 401 Unauthorized: Invalid or missing token
+
+## Example
+No request body required.
