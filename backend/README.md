@@ -58,7 +58,7 @@ No request body required.
 
 # /user/logout
 
-Logs out the current user.
+Logs out the current user and blacklist the token provided in cookie or headers
 
 ## Status Codes
 • 200 OK: Successfully logged out  
